@@ -115,6 +115,8 @@ public class HomeWorkApp {
 
 
     //Задача №8
-    public static
+    public static void shiftArray(int[] array, int n){
+
+    }
 
 }
