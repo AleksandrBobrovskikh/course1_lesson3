@@ -87,9 +87,8 @@ public class HomeWorkApp {
         int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
         shiftArray(arr, -3);
         System.out.println(Arrays.toString(arr));
-
-
     }
+
 
     //Задача №5
     public static int[] giveArray(int len, int initialValue) {
@@ -139,7 +138,5 @@ public class HomeWorkApp {
                 }
             }
         }
-
     }
-
 }
