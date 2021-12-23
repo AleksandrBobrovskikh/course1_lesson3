@@ -46,7 +46,7 @@ public class HomeWorkApp {
                 if (i == j || j == squareArray.length - 1 - i)
                     squareArray[i][j] = 1;
             }
-        for (int i = 0; i < squareArray.length; i++) {
+        for (int i = 0; i < squareArray.length; i++) {              //Красивый вывод двумерного массива
             for (int j = 0; j < squareArray[0].length; j++) {
                 System.out.print(squareArray[i][j] + "  ");
             }
@@ -77,14 +77,16 @@ public class HomeWorkApp {
 
 
         //Задача №7
-        int[] array = {2,2,2,1,2,2,10,1};
+        int[] array = {2, 2, 2, 1, 2, 2, 10, 1};
         System.out.println("В массиве " + Arrays.toString(array) +
                 " есть место, где левая и правые суммы равны? - " + equalLeftAndRightSum(array));
         System.out.println();
 
 
         //Задача №8
-
+        int[] arr = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+        shiftArray(arr, -3);
+        System.out.println(Arrays.toString(arr));
 
 
     }
@@ -108,14 +110,35 @@ public class HomeWorkApp {
                 right += array[j];
             }
             if (left == right)
-               return true;
+                return true;
         }
         return false;
     }
 
 
     //Задача №8
-    public static void shiftArray(int[] array, int n){
+    public static void shiftArray(int[] array, int n) {
+        int a = 0;
+        int z = Math.abs(n);
+        for (int i = 0; i < z; i++) {
+            if (n >= 0) {
+                int b = array[0];
+                for (int j = 0; j < array.length - 1; j++) {
+                    array[0] = array[array.length - 1];
+                    a = b;
+                    b = array[j + 1];
+                    array[j + 1] = a;
+                }
+            } else {
+                int c = array[array.length - 1];
+                for (int j = array.length - 1; j > 0; j--) {
+                    array[array.length - 1] = array[0];
+                    a = c;
+                    c = array[j - 1];
+                    array[j - 1] = a;
+                }
+            }
+        }
 
     }
 
